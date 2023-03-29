@@ -25,14 +25,15 @@ I'll give away that the code runs a 2-tailed permutation test.
 
 Create a script that 
 - uses better variable names
-- uses no inline functions (While useful at times, a problem with inline functions is that you cannot debug them).
+- uses no inline functions (While useful at times, a problem with inline functions is that you cannot easily debug them).
 For this assignment, create a function that will run this type of test with data from any two samples (for instance, as used here, neuronal firing rates observed after injecting ketamine `a` or saline `b`). 
 
 Create a function that performs the main permutation test and
 - Takes two vectors of observations as input
+- Checks that the input arguments are valid (use inputParser, or, better, using [function argument validation](https://www.mathworks.com/help/matlab/matlab_prog/function-argument-validation-1.html)
 - Calls helper functions (the equivalents of `dstd` and `dstdn`). 
 - Takes an input argument that allows you to specify the number of boostrapped samples that will be drawn
 - Takes an input argument specifying whether plots should be generated.
 - Outputs the null distribution, the test metric, and the pValue
-- Generates a figure (if specified) showing the cumulative null distribution, the test statistics, and confidence interval.
+- Generates a figure (if requested in the call to the function) showing the cumulative null distribution, the test statistics, and confidence interval.
 - Prints the results of the test to the command line
